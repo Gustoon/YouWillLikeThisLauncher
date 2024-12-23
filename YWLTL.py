@@ -15,6 +15,7 @@ except:
 import customtkinter as ctk
 import tkinter as tk
 import CTkListbox
+import SpinBox
 
 def create():
     root = ctk.CTk()
@@ -74,7 +75,7 @@ def main():
 
     root = ctk.CTk()
     root.resizable(False, False)
-    root.geometry('300x270')
+    root.geometry('300x350')
     root.title("You Will Like This Launcher (YWLTL)")
 
     usernameEntry = ctk.CTkEntry(root, placeholder_text="Pseudonyme")
@@ -107,9 +108,17 @@ def main():
                 with open(os.path.join("Instances", listbox.get(), "infos.txt"), "r+") as f:
                     information = f.read()
                     f.close()
-                os.system(basecmd + " --main-dir " + os.path.join("Instances", ".MC") + " --work-dir " + os.path.join("Instances", listbox.get()) + " start " + information + " -u" + usernameEntry.get())
+                ram = float(ramSpinbox.entry.get()) * 1024
+                ram = str(ram).replace(".0", "")
+                os.system(basecmd + " --main-dir " + os.path.join("Instances", ".MC") + " --work-dir " + os.path.join("Instances", listbox.get()) + " start " + information + " -u" + usernameEntry.get() + ' --jvm-args="-Xmx' + ram + 'M"')
     LaunchButton = ctk.CTkButton(root, text="Lancer l'instance selectionnée", command=launch)
     LaunchButton.pack(fill="x", padx=5, pady=5)
+
+    ramLabel = ctk.CTkLabel(root, text="Mémoire vive allouée au jeu (En Giga-Octets)")
+    ramLabel.pack(fill="x", padx=5, pady=2)
+
+    ramSpinbox = SpinBox.FloatSpinbox(master=root, step_size=0.5)
+    ramSpinbox.pack(fill="x", padx=5, pady=5)
 
     root.mainloop()
 
