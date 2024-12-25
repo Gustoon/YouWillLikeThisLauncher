@@ -1,14 +1,17 @@
 # You Will Like This Launcher (YWLTL)
+
+# todo
+
 import os
 import platform
 
 try:
-    import customtkinter, certifi, portablemc, CTkMessagebox, CTkListbox
+    import customtkinter, certifi, portablemc, CTkMessagebox, CTkListbox, bs4
 except:
     if platform.system() == "Windows":
-        os.system("python -m pip install customtkinter certifi portablemc CTkMessageBox CTkListbox")
+        os.system("python -m pip install customtkinter certifi portablemc CTkMessageBox CTkListbox beautifulsoup4")
     else:
-        os.system("python3 -m pip install customtkinter certifi portablemc CTkMessageBox CTkListbox")
+        os.system("python3 -m pip install customtkinter certifi portablemc CTkMessageBox CTkListbox beautifulsoup4")
     import sys
     sys.exit()
 
@@ -16,11 +19,12 @@ import customtkinter as ctk
 import tkinter as tk
 import CTkListbox
 import SpinBox
+import CurseForgeImplementations
 
 def create():
     root = ctk.CTk()
     root.resizable(False, False)
-    root.geometry('300x150')
+    root.geometry('300x170')
     root.title("You Will Like This Launcher (YWLTL)")
     
     #versionEntry_var = ctk.StringVar(value='')
@@ -40,11 +44,13 @@ def create():
         instanceName = InstanceNameEntry.get()
         version = versionEntry.get()
         modLoader = ModLoader_var.get()
+        controller = controllerSwitch_var.get()
+
         if os.path.exists(os.path.join(".", "Instances", instanceName)):
             CTkMessagebox.CTkMessagebox(title='Attention !', message="Tu ne peux pas créer d'instance avec ce nom car il existe déjà une instance avec celui-ci !", option_1='AH', icon="warning")
         else:
-            createInstanceBtn(version, modLoader, instanceName)
-    def createInstanceBtn(version, loaders, name):
+            createInstanceBtn(version, modLoader, instanceName, controller)
+    def createInstanceBtn(version, loaders, name, controller):
         if name == '' or version == '':
             CTkMessagebox.CTkMessagebox(title='Attention !', message='Remplis toutes les informations avant de cliquer ici !', option_1='OK', icon="warning")
         else:
@@ -63,9 +69,16 @@ def create():
                 f.close()
             if not loaders == 'vanilla':
                 os.mkdir(os.path.join(".", "Instances", name, "mods"))
+                if controller == 'on':
+                    controllerImplementation = CurseForgeImplementations.CFimpl(version, loaders)
+                    controllerImplementation.Window()
             main()
     createInstanceButton = ctk.CTkButton(root, text="Créer !", width=290, command=doCreateInstanceBtn)
     createInstanceButton.place(y=100, x=5)
+
+    controllerSwitch_var = customtkinter.StringVar(value="off")
+    controllerSwitch = ctk.CTkSwitch(root, text="Support de la manette", variable=controllerSwitch_var, onvalue="on", offvalue="off")
+    controllerSwitch.place(y=135, x=70)
 
     root.mainloop()
 
