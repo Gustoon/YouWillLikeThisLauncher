@@ -1,0 +1,7 @@
+customtkinter
+certifi
+portablemc
+CTkMessagebox
+CTkListbox
+beautifulsoup4
+requests

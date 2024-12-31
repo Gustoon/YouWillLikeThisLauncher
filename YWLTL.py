@@ -1,20 +1,21 @@
 # You Will Like This Launcher (YWLTL)
 
-# todo
-
 import os
 import platform
-
+from time import sleep
 try:
-    import customtkinter, certifi, portablemc, CTkMessagebox, CTkListbox, bs4
+    import customtkinter, certifi, portablemc, CTkMessagebox, CTkListbox, bs4, requests
+except:
+    print("Some modules are missing. Please install them using pip install -r requirements.txt")
+    sleep(3)
+"""
 except:
     if platform.system() == "Windows":
-        os.system("python -m pip install customtkinter certifi portablemc CTkMessageBox CTkListbox beautifulsoup4")
+        os.system("python -m pip install customtkinter certifi portablemc CTkMessageBox CTkListbox beautifulsoup4 requests")
     else:
-        os.system("python3 -m pip install customtkinter certifi portablemc CTkMessageBox CTkListbox beautifulsoup4")
-    import sys
+        os.system("python3 -m pip install customtkinter certifi portablemc CTkMessageBox CTkListbox beautifulsoup4 requests")
     sys.exit()
-
+"""
 import customtkinter as ctk
 import tkinter as tk
 import CTkListbox
@@ -27,7 +28,6 @@ def create():
     root.geometry('300x170')
     root.title("You Will Like This Launcher (YWLTL)")
     
-    #versionEntry_var = ctk.StringVar(value='')
     versionEntry = ctk.CTkEntry(root, placeholder_text="Version (par ex. 1.19.2)", width=140)
     versionEntry.place(y=50, x=5)
 
