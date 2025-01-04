@@ -5,7 +5,7 @@ a = Analysis(
     ['YWLTL.py'],
     pathex=[],
     binaries=[],
-    datas=[('SpinBox.py', '.'), ('CurseForgeImplementations.py', '.')],
+    datas=[('SpinBox.py', '.'), ('CurseForgeImplementations.py', '.'), ('./RMMUD/', '.')],
     hiddenimports=[],
     hookspath=[],
     hooksconfig={},
@@ -36,3 +36,5 @@ exe = EXE(
     codesign_identity=None,
     entitlements_file=None,
 )
+
+#PyInstaller spec file
