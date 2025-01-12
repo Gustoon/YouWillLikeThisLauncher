@@ -1,4 +1,5 @@
 # You Will Like This Launcher (YWLTL)
+# TODO mettre a jour automatiquement le launcher en prenant la derniere version sur github (pour eviter qu'on prenne 1 heure a mettre a jour pour jouer avec le houmous)
 
 import os
 import platform
@@ -70,7 +71,7 @@ def create():
             if not loaders == 'vanilla':
                 os.mkdir(os.path.join(".", "Instances", name, "mods"))
                 if controller == 'on':
-                    controllerImplementation = CurseForgeImplementations.CFimpl(version, loaders)
+                    controllerImplementation = CurseForgeImplementations.CFimpl(version, loaders, name)
                     controllerImplementation.Window()
             main()
     createInstanceButton = ctk.CTkButton(root, text="Créer !", width=290, command=doCreateInstanceBtn)
@@ -111,6 +112,9 @@ def main():
         if not listbox.get():
             CTkMessagebox.CTkMessagebox(title='Attention !', message='Selectionne une instance !', option_1="Ah oui, c'est vrai...", icon="warning")
         else:
+            with open(os.path.join(".", "UsernameSaver.txt"), "w") as f:
+                f.write(usernameEntry.get())
+                f.close()
             if platform.system() == "Windows":
                 basecmd = "python -m portablemc"
             else:
@@ -133,6 +137,14 @@ def main():
     ramSpinbox = SpinBox.FloatSpinbox(master=root, step_size=0.5)
     ramSpinbox.pack(fill="x", padx=5, pady=5)
 
+    if not os.path.exists(os.path.join(".", "UsernameSaver.txt")):
+        with open((os.path.join(".", "UsernameSaver.txt")), "x") as f:
+            f.close()
+    else:
+        with open(os.path.join(".", "UsernameSaver.txt"), "r") as f:
+            usernameEntry.insert(0, f.readlines(1))
+            usernameEntry.configure(state="disabled")
+            f.close()
     root.mainloop()
 
 if __name__ == "__main__":

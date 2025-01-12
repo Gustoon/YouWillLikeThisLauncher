@@ -1,12 +1,11 @@
-2025/01/04 14:49:37.390 INFO: Loading config.
-2025/01/04 14:49:37.391 INFO: Checking for an RMMUD update.
-2025/01/04 14:49:38.381 INFO: You are on the latest version already.
-2025/01/04 14:49:38.382 INFO: LOADING INSTANCES
-2025/01/04 14:49:38.403 INFO: Loading enabled instance "config.yaml"
-2025/01/04 14:49:38.405 INFO: UPDATING MODS
-2025/01/04 14:49:38.406 INFO: Updating midnightlib for fabric 1.19.4
-2025/01/04 14:49:43.345 INFO: Downloaded "midnightlib-fabric-1.3.0.jar" into "RMMUDDownloads\fabric\1.19.4"
-2025/01/04 14:49:43.351 INFO: DELETING OUTDATED MODS
-2025/01/04 14:49:43.351 INFO: Deleting old mods from instance: config
-2025/01/04 14:49:43.352 WARNING: Could not delete old mods in ".\.minecraft\mods": Could not find ".\.minecraft\mods"
-2025/01/04 14:49:43.353 INFO: Done.
+2025/01/12 16:16:37.500 INFO: Loading config.
+2025/01/12 16:16:37.502 INFO: LOADING INSTANCES
+2025/01/12 16:16:37.512 INFO: Loading enabled instance "config.yaml"
+2025/01/12 16:16:37.513 INFO: UPDATING MODS
+2025/01/12 16:16:37.513 INFO: Updating framework for forge 1.20.1
+2025/01/12 16:16:42.101 INFO: Downloaded "framework-forge-1.20.1-0.7.12.jar" into "RMMUDDownloads\forge\1.20.1"
+2025/01/12 16:16:42.145 INFO: Copied "RMMUDDownloads\forge\1.20.1\framework-forge-1.20.1-0.7.12.jar" to ".\mods"
+2025/01/12 16:16:42.150 INFO: DELETING OUTDATED MODS
+2025/01/12 16:16:42.151 INFO: Deleting old mods from instance: config
+2025/01/12 16:16:42.151 ERROR: UnboundLocalError("cannot access local variable 'instance_dir' where it is not associated with a value")
+The script could no longer continue to function due to the error described above. Please fix the issue described or go to https://github.com/RandomGgames/RMMUD to request help/report a bug

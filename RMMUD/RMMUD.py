@@ -502,7 +502,7 @@ def deleteDuplicateMods(instances: Instances) -> None:
             else:
                 logging.debug(f'No old mods to delete')
         else:
-            logging.warning(f'Could not delete old mods in "{instance_dir}": Could not find "{instance_dir}"')
+            logging.info(f'Could not delete old mods in "{instance_dir}": Could not find "{instance_dir}"') #passed in info for YWLTL
     
     for instance_name, instance in instances.items():
         logging.info(f'Deleting old mods from instance: {instance_name}')

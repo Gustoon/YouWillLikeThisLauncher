@@ -1,5 +1,5 @@
-Directory: .\.minecraft
+Directory: .\
 Enabled: true
-Loader: Fabric
-Mods: https://www.curseforge.com/minecraft/mc-mods/midnightlib
-Version: 1.19.4
+Loader: forge
+Mods: https://www.curseforge.com/minecraft/mc-mods/framework
+Version: 1.20.1
