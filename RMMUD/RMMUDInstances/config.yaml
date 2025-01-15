@@ -1,5 +1,6 @@
 Directory: .\
-Enabled: true
-Loader: forge
-Mods: https://www.curseforge.com/minecraft/mc-mods/framework
-Version: 1.20.1
+Enabled: 'false'
+Loader: Forge
+Mods:
+- https://www.curseforge.com/minecraft/mc-mods/jei
+Version: 1.19.2

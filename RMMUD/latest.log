@@ -1,11 +1,10 @@
-2025/01/12 16:16:37.500 INFO: Loading config.
-2025/01/12 16:16:37.502 INFO: LOADING INSTANCES
-2025/01/12 16:16:37.512 INFO: Loading enabled instance "config.yaml"
-2025/01/12 16:16:37.513 INFO: UPDATING MODS
-2025/01/12 16:16:37.513 INFO: Updating framework for forge 1.20.1
-2025/01/12 16:16:42.101 INFO: Downloaded "framework-forge-1.20.1-0.7.12.jar" into "RMMUDDownloads\forge\1.20.1"
-2025/01/12 16:16:42.145 INFO: Copied "RMMUDDownloads\forge\1.20.1\framework-forge-1.20.1-0.7.12.jar" to ".\mods"
-2025/01/12 16:16:42.150 INFO: DELETING OUTDATED MODS
-2025/01/12 16:16:42.151 INFO: Deleting old mods from instance: config
-2025/01/12 16:16:42.151 ERROR: UnboundLocalError("cannot access local variable 'instance_dir' where it is not associated with a value")
+2025/01/15 16:55:58.589 INFO: Loading config.
+2025/01/15 16:55:58.591 INFO: LOADING INSTANCES
+2025/01/15 16:55:58.594 INFO: Loading enabled instance "config.yaml"
+2025/01/15 16:55:58.596 INFO: UPDATING MODS
+2025/01/15 16:55:58.596 INFO: Updating jei for forge 1.19.2
+2025/01/15 16:56:02.778 INFO: Downloaded "jei-1.19.2-forge-11.8.1.1034.jar" into "RMMUDDownloads\forge\1.19.2"
+2025/01/15 16:56:02.860 INFO: DELETING OUTDATED MODS
+2025/01/15 16:56:02.860 INFO: Deleting old mods from instance: config
+2025/01/15 16:56:02.861 ERROR: UnboundLocalError("cannot access local variable 'instance_dir' where it is not associated with a value")
 The script could no longer continue to function due to the error described above. Please fix the issue described or go to https://github.com/RandomGgames/RMMUD to request help/report a bug

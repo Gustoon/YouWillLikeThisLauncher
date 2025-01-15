@@ -86,7 +86,8 @@ def create():
 def main():
     if not os.path.exists(os.path.join(".", "Instances")):
         os.mkdir(os.path.join(".", "Instances"))
-
+    if not os.path.exists(os.path.join(".", "downloads")):
+        os.mkdir(os.path.join(".", "downloads"))
     root = ctk.CTk()
     root.resizable(False, False)
     root.geometry('300x350')

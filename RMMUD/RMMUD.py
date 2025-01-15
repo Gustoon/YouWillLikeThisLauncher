@@ -397,7 +397,7 @@ def downloadCurseforgeMod(mod_id: str, mod_loader: str, minecraft_version: str, 
     
     # Get latest or desired mod version
     logging.debug(f'Getting files from CurseForge')
-    curseforge_mod_loader = { 'forge': 1, 'fabric': 4 }.get(mod_loader, None)
+    curseforge_mod_loader = { 'forge': 1, 'fabric': 4 , 'neoforge' : 6, 'quilt' : 5}.get(mod_loader, None)
     if mod_version == 'latest_version':
         try:
             url = (f'https://api.curseforge.com/v1/mods/{curseforge_mod_id}/files')

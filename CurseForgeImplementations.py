@@ -88,7 +88,8 @@ class CFimpl :
 
         root = ctk.CTk()
         root.title("Implementer une manette")
-        root.geometry("600x380")
+        root.geometry("400x224")
+        root.resizable(False, False)
 
         instructionsLabel = ctk.CTkLabel(root, text="Texte a re-travailer...",
         wraplength=390)
@@ -118,7 +119,11 @@ class CFimpl :
         
         python = "python" if platform.system() == "Windows" else "python3"
         subprocess.run([python, "RMMUD.py"], cwd=os.path.join(".", "RMMUD"))
+        with open(os.path.join(".", "RMMUD", "RMMUDInstances", "config.yaml"), 'w') as file:
+            data['Enabled'] = "false"
+            yaml.dump(data, file)
+            file.close()       
     
 if __name__ == "__main__":
-    controllerImplementation = CFimpl("1.19.4", "Fabric")
+    controllerImplementation = CFimpl("1.19.4", "Fabric", 'cacamoulox')
     controllerImplementation.Window()
