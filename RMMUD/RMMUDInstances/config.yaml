@@ -1,5 +1,5 @@
 Directory: .\
-Enabled: 'false'
+Enabled: false
 Loader: Forge
 Mods:
 - https://www.curseforge.com/minecraft/mc-mods/jei

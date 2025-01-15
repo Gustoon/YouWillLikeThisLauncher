@@ -22,6 +22,7 @@ import tkinter as tk
 import CTkListbox
 import SpinBox
 import CurseForgeImplementations
+import OnlineModpacksSupport
 
 def create():
     root = ctk.CTk()
@@ -82,7 +83,6 @@ def create():
     controllerSwitch.place(y=135, x=70)
 
     root.mainloop()
-
 def main():
     if not os.path.exists(os.path.join(".", "Instances")):
         os.mkdir(os.path.join(".", "Instances"))
@@ -90,8 +90,15 @@ def main():
         os.mkdir(os.path.join(".", "downloads"))
     root = ctk.CTk()
     root.resizable(False, False)
-    root.geometry('300x350')
+    root.geometry('300x375')
     root.title("You Will Like This Launcher (YWLTL)")
+    
+    def ImportModpack():
+        root.destroy()
+        OnlineModpacksSupport.Window()
+        main()
+    ImportModpackButton = ctk.CTkButton(root, text="Importer un modpack dans une instance", command=ImportModpack)
+    ImportModpackButton.pack(fill="x", padx=5, pady=5)
 
     usernameEntry = ctk.CTkEntry(root, placeholder_text="Pseudonyme")
     usernameEntry.pack(fill="x", pady=10, padx=5)

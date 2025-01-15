@@ -362,7 +362,7 @@ def downloadModrinthMod(mod_id: str, mod_loader: str, minecraft_version: str, mo
             return
         logging.info(f'Downloaded "{file_name}" into "{download_path}"')
     
-    logging.debug(f'Copying downloaded file into instance(s)')
+    logging.debug(f'Moving downloaded file into instance(s)')
     for instance_dir in instance_dirs:
         instance_dir = os.path.join(instance_dir, 'mods')
         instance_file_path = os.path.join(instance_dir, file_name)
@@ -370,15 +370,15 @@ def downloadModrinthMod(mod_id: str, mod_loader: str, minecraft_version: str, mo
             if os.path.exists(downloaded_file_path):
                 if not os.path.isfile(instance_file_path) or checkIfZipIsCorrupted(instance_file_path):
                     try:
-                        shutil.copy(downloaded_file_path, instance_file_path)
-                        logging.info(f'Copied "{downloaded_file_path}" into "{instance_dir}"')
+                        shutil.move(downloaded_file_path, instance_file_path)
+                        logging.info(f'Moved "{downloaded_file_path}" into "{instance_dir}"')
                     except Exception as e:
-                        logging.warning(f'Could not copy "{downloaded_file_path}" into "{instance_dir}": {e}')
+                        logging.warning(f'Could not move "{downloaded_file_path}" into "{instance_dir}": {e}')
                         continue
             else:
-                logging.warning(f'Could not copy "{downloaded_file_path}" into "{instance_dir}": Could not find "{downloaded_file_path}"')
+                logging.warning(f'Could not move "{downloaded_file_path}" into "{instance_dir}": Could not find "{downloaded_file_path}"')
         else:
-            logging.warning(f'Could not copy "{downloaded_file_path}" into "{instance_dir}": Could not find "{instance_dir}"')
+            logging.warning(f'Could not move "{downloaded_file_path}" into "{instance_dir}": Could not find "{instance_dir}"')
 
 def downloadCurseforgeMod(mod_id: str, mod_loader: str, minecraft_version: str, mod_version: str, download_dir: str, instance_dirs: list[str], curseforge_api_key: str) -> None:
     logging.info(f'Updating {mod_id} for {mod_loader} {minecraft_version}')
@@ -431,17 +431,17 @@ def downloadCurseforgeMod(mod_id: str, mod_loader: str, minecraft_version: str, 
             return
         logging.info(f'Downloaded "{file_name}" into "{download_path}"')
     
-    logging.debug(f'Copying downloaded file into instance(s)')
+    logging.debug(f'Moving downloaded file into instance(s)')
     for instance_dir in instance_dirs:
         instance_dir = os.path.join(instance_dir, 'mods')
         instance_file_path = os.path.join(instance_dir, file_name)
         if os.path.exists(instance_dir) and os.path.exists(downloaded_file_path):
             if not os.path.isfile(instance_file_path) or checkIfZipIsCorrupted(instance_file_path):
                 try:
-                    shutil.copy(downloaded_file_path, instance_file_path)
-                    logging.info(f'Copied "{downloaded_file_path}" to "{instance_dir}"')
+                    shutil.move(downloaded_file_path, instance_file_path)
+                    logging.info(f'Moved "{downloaded_file_path}" to "{instance_dir}"')
                 except Exception as e:
-                    logging.warning(f'Could not copy "{downloaded_file_path}" into "{instance_dir}": {e}')
+                    logging.warning(f'Could not move "{downloaded_file_path}" into "{instance_dir}": {e}')
                     continue
 
 def updateMods(instances: ParsedInstances, config: Config) -> None:

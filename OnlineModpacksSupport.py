@@ -68,6 +68,8 @@ def Window():
         python = "python" if platform.system() == "Windows" else "python3"
         subprocess.run([python, "RMMUD.py"], cwd=os.path.join(".", "RMMUD"))
 
+        for mod in os.listdir(os.path.join(".", "Instances", InstanceList.get(), "mods")):
+            os.remove(os.path.join(".", "Instances", InstanceList.get(), "mods", mod))
         for mod in os.listdir(os.path.join(".", "RMMUD", "mods")):
             shutil.move(os.path.join(".", "RMMUD", "mods", mod), os.path.join(".", "Instances", InstanceList.get(), "mods"))
 
@@ -75,7 +77,7 @@ def Window():
             data = yaml.safe_load(file)
             file.close()
         with open(os.path.join(".", "RMMUD", "RMMUDInstances", selected_yaml_file), 'w') as file:
-            data['Enabled'] = "false"
+            data['Enabled'] = False
             yaml.dump(data, file)
             file.close()
 

@@ -91,7 +91,7 @@ class CFimpl :
         root.geometry("400x224")
         root.resizable(False, False)
 
-        instructionsLabel = ctk.CTkLabel(root, text="Texte a re-travailer...",
+        instructionsLabel = ctk.CTkLabel(root, text="Coche une case et appuie sur fini\npour telecharger le mod",
         wraplength=390)
         instructionsLabel.pack(pady=6, padx=5)
 
@@ -113,6 +113,7 @@ class CFimpl :
         data['Loader'] = loader
         data['Version'] = version
         data['Mods'] = mod_url
+        data['Enabled'] = True
         with open(os.path.join(".", "RMMUD", "RMMUDInstances", "config.yaml"), 'w') as file:
             yaml.dump(data, file)
             file.close()
@@ -125,5 +126,5 @@ class CFimpl :
             file.close()       
     
 if __name__ == "__main__":
-    controllerImplementation = CFimpl("1.19.4", "Fabric", 'cacamoulox')
+    controllerImplementation = CFimpl("1.19.2", "Forge", 'cacamoulox')
     controllerImplementation.Window()
