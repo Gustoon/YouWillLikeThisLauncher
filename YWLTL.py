@@ -3,20 +3,16 @@
 
 import os
 import platform
+import sys
 from time import sleep
 try:
-    import customtkinter, certifi, portablemc, CTkMessagebox, CTkListbox, bs4, requests
-except:
-    print("Some modules are missing. Please install them using pip install -r requirements.txt")
-    sleep(3)
-"""
+    import customtkinter, certifi, portablemc, CTkMessagebox, CTkListbox, requests, urllib, requests, yaml
 except:
     if platform.system() == "Windows":
-        os.system("python -m pip install customtkinter certifi portablemc CTkMessageBox CTkListbox beautifulsoup4 requests")
+        os.system("python -m pip install customtkinter certifi portablemc CTkMessageBox CTkListbox requests urllib3 requests pyyaml")
     else:
-        os.system("python3 -m pip install customtkinter certifi portablemc CTkMessageBox CTkListbox beautifulsoup4 requests")
+        os.system("python3 -m pip install customtkinter certifi portablemc CTkMessageBox CTkListbox requests urllib3 requests pyyaml")
     sys.exit()
-"""
 import customtkinter as ctk
 import tkinter as tk
 import CTkListbox

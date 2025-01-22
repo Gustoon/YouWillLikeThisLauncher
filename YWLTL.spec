@@ -5,7 +5,7 @@ a = Analysis(
     ['YWLTL.py'],
     pathex=[],
     binaries=[],
-    datas=[('SpinBox.py', '.'), ('CurseForgeImplementations.py', '.'), ('./OnlineModpacksSupport.py/', '.'), ('./RMMUD/', '.')],
+    datas=[('SpinBox.py', '.'), ('CurseForgeImplementations.py', '.'), ('./OnlineModpacksSupport.py/', '.'), ('./RMMUD/', '.'), ('./download-mods.py', '.'), ('requirements.txt', '.')],
     hiddenimports=[],
     hookspath=[],
     hooksconfig={},

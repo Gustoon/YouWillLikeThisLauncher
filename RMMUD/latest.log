@@ -1,11 +1,36 @@
-2025/01/15 18:19:07.448 INFO: Loading config.
-2025/01/15 18:19:07.450 INFO: LOADING INSTANCES
-2025/01/15 18:19:07.454 INFO: Loading enabled instance "config.yaml"
-2025/01/15 18:19:07.455 INFO: UPDATING MODS
-2025/01/15 18:19:07.456 INFO: Updating jei for forge 1.19.2
-2025/01/15 18:19:12.262 INFO: Downloaded "jei-1.19.2-forge-11.8.1.1034.jar" into "RMMUDDownloads\forge\1.19.2"
-2025/01/15 18:19:12.293 INFO: Copied "RMMUDDownloads\forge\1.19.2\jei-1.19.2-forge-11.8.1.1034.jar" to ".\mods"
-2025/01/15 18:19:12.296 INFO: DELETING OUTDATED MODS
-2025/01/15 18:19:12.297 INFO: Deleting old mods from instance: config
-2025/01/15 18:19:12.298 ERROR: UnboundLocalError("cannot access local variable 'instance_dir' where it is not associated with a value")
+2025/01/19 18:42:07.634 INFO: Loading config.
+2025/01/19 18:42:07.646 INFO: LOADING INSTANCES
+2025/01/19 18:42:07.657 INFO: Loading enabled instance "caca.yaml"
+2025/01/19 18:42:07.666 INFO: Ignoring disabled instance "config.yaml"
+2025/01/19 18:42:07.668 INFO: UPDATING MODS
+2025/01/19 18:42:07.668 INFO: Updating jei for forge 1.20.1
+2025/01/19 18:42:12.118 INFO: Downloaded "jei-1.20.1-forge-15.20.0.106.jar" into "RMMUDDownloads\forge\1.20.1"
+2025/01/19 18:42:12.123 INFO: Moved "RMMUDDownloads\forge\1.20.1\jei-1.20.1-forge-15.20.0.106.jar" to ".\mods"
+2025/01/19 18:42:12.126 INFO: Updating samurai-dynasty for forge 1.20.1
+2025/01/19 18:42:17.102 INFO: Downloaded "samurai_dynasty-0.0.48-1.20.1-neo.jar" into "RMMUDDownloads\forge\1.20.1"
+2025/01/19 18:42:17.111 INFO: Moved "RMMUDDownloads\forge\1.20.1\samurai_dynasty-0.0.48-1.20.1-neo.jar" to ".\mods"
+2025/01/19 18:42:17.118 INFO: Updating create for forge 1.20.1
+2025/01/19 18:42:22.409 INFO: Downloaded "create-1.20.1-0.5.1.j.jar" into "RMMUDDownloads\forge\1.20.1"
+2025/01/19 18:42:22.413 INFO: Moved "RMMUDDownloads\forge\1.20.1\create-1.20.1-0.5.1.j.jar" to ".\mods"
+2025/01/19 18:42:22.416 INFO: Updating geckolib for forge 1.20.1
+2025/01/19 18:42:27.088 INFO: Downloaded "geckolib-forge-1.20.1-4.7.jar" into "RMMUDDownloads\forge\1.20.1"
+2025/01/19 18:42:27.096 INFO: Moved "RMMUDDownloads\forge\1.20.1\geckolib-forge-1.20.1-4.7.jar" to ".\mods"
+2025/01/19 18:42:27.101 INFO: Updating curios for forge 1.20.1
+2025/01/19 18:42:31.522 INFO: Downloaded "curios-forge-5.11.1+1.20.1.jar" into "RMMUDDownloads\forge\1.20.1"
+2025/01/19 18:42:31.531 INFO: Moved "RMMUDDownloads\forge\1.20.1\curios-forge-5.11.1+1.20.1.jar" to ".\mods"
+2025/01/19 18:42:31.536 INFO: Updating azurelib for forge 1.20.1
+2025/01/19 18:42:36.026 INFO: Downloaded "azurelib-neo-1.20.1-2.0.41.jar" into "RMMUDDownloads\forge\1.20.1"
+2025/01/19 18:42:36.030 INFO: Moved "RMMUDDownloads\forge\1.20.1\azurelib-neo-1.20.1-2.0.41.jar" to ".\mods"
+2025/01/19 18:42:36.033 INFO: Updating alexs-mobs for forge 1.20.1
+2025/01/19 18:42:41.582 INFO: Downloaded "alexsmobs-1.22.9.jar" into "RMMUDDownloads\forge\1.20.1"
+2025/01/19 18:42:41.588 INFO: Moved "RMMUDDownloads\forge\1.20.1\alexsmobs-1.22.9.jar" to ".\mods"
+2025/01/19 18:42:41.594 INFO: Updating citadel for forge 1.20.1
+2025/01/19 18:42:46.339 INFO: Downloaded "citadel-2.6.1-1.20.1.jar" into "RMMUDDownloads\forge\1.20.1"
+2025/01/19 18:42:46.343 INFO: Moved "RMMUDDownloads\forge\1.20.1\citadel-2.6.1-1.20.1.jar" to ".\mods"
+2025/01/19 18:42:46.347 INFO: Updating alexs-caves for forge 1.20.1
+2025/01/19 18:42:54.341 INFO: Downloaded "alexscaves-2.0.2.jar" into "RMMUDDownloads\forge\1.20.1"
+2025/01/19 18:42:54.345 INFO: Moved "RMMUDDownloads\forge\1.20.1\alexscaves-2.0.2.jar" to ".\mods"
+2025/01/19 18:42:54.351 INFO: DELETING OUTDATED MODS
+2025/01/19 18:42:54.352 INFO: Deleting old mods from instance: caca
+2025/01/19 18:42:54.352 ERROR: UnboundLocalError("cannot access local variable 'instance_dir' where it is not associated with a value")
 The script could no longer continue to function due to the error described above. Please fix the issue described or go to https://github.com/RandomGgames/RMMUD to request help/report a bug
